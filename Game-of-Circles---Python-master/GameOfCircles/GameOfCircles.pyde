@@ -17,8 +17,8 @@ def setup():
     player = Player(width/2, height/2, playerTeam)
     
     sprites.append(player)
-    sprites.append(Enemy) 
-    sprites.append(Enemy)
+    sprites.append(Enemy(50, 50, enemyTeam)) 
+    sprites.append(Enemy(150, 150, enemyTeam))
     sprites.append(Raindrop(50, 50, enemyTeam))
     sprites.append(Raindrop(150, 150, enemyTeam))
     sprites.append(Raindrop(50, 250, enemyTeam))
