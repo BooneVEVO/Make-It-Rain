@@ -1,3 +1,4 @@
+
 class Bullet:
     
     diameter = 10

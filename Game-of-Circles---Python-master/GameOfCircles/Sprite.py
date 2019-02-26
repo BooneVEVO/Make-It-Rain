@@ -1,3 +1,5 @@
+import SpriteManager
+
 class Sprite:
     team = 2
     diameter = 50
