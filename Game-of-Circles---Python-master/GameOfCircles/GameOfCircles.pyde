@@ -22,7 +22,15 @@ def setup():
     SpriteManager.spawn(JiggleBot(200, 50, 2))
     SpriteManager.spawn(Enemy(100, 100, 2))
     SpriteManager.spawn(Enemy(150, 50, 2))
-    
+    #SpriteManager.spawn(Raindrop(100,10, 20))
+   # SpriteManager.spawn(Raindrop(200,10, 20))
+  #  SpriteManager.spawn(Raindrop(300,10, 20))
+ #   SpriteManager.spawn(Raindrop(400,10, 20))
+#    SpriteManager.spawn(Raindrop(150,20, 20))
+   # SpriteManager.spawn(Raindrop(250,20, 20))
+  #  SpriteManager.spawn(Raindrop(350,20, 20))
+ #   SpriteManager.spawn(Raindrop(50,10, 20))
+#    SpriteManager.spawn(Raindrop(450,10, 20))
 def draw():
     background(255)    
     SpriteManager.animate()
