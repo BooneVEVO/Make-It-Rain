@@ -6,6 +6,7 @@ from Player import Player
 from SpriteManager import sprites
 from JiggleBot import JiggleBot
 from ScreenSaverBot import ScreenSaverBot
+from Shooter import Shooter
 
 import SpriteManager
 
@@ -22,6 +23,7 @@ def setup():
     SpriteManager.spawn(JiggleBot(200, 50, 2))
     SpriteManager.spawn(Enemy(100, 100, 2))
     SpriteManager.spawn(Enemy(150, 50, 2))
+    SpriteManager.spawn(Shooter(150, 50, 2))
     #SpriteManager.spawn(Raindrop(100,10, 20))
    # SpriteManager.spawn(Raindrop(200,10, 20))
   #  SpriteManager.spawn(Raindrop(300,10, 20))

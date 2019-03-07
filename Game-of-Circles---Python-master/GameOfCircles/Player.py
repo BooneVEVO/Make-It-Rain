@@ -39,8 +39,14 @@ class Player:
         self.display()
         self.move()
         
-    def fire(self):
-        print("FIRE")
+    def fire(self, vector = None):
+        if vector is None:
+            SpriteManager.spawn(Bullet(self.x, self.y, PVector(0, -10), self.team))
+        else:
+            SpriteManager.spawn(Bullet(self.x, self.y, vector, self.team))
+        
+    def handleCollision(self):
+        pass
         
     def keyDown(self):
         if key == 'f' or key == 'F':
