@@ -11,6 +11,7 @@ class Shooter(Sprite):
     
     mark = 0
     wait = 700
+#    go = False
     
     def move(self):
         self.x += self.speed
@@ -21,25 +22,23 @@ class Shooter(Sprite):
         self.fire(vector)
     
     def aim(self, target):
+        
+        distance = dist(target.x, target.y, self.x, self.y)
         xComponent = target.x - self.x
         yComponent = target.y - self.y
-        d = sqrt((xComponent + xComponent) - (yComponent + yComponent))
-        xVector = xComponent / d
-        yVector = yComponent / d
+#        d = sqrt((xComponent + xComponent)**2 - (yComponent + yComponent)**2)
+ #       xVector = xComponent / d
+  #      yVector = yComponent / d
         
-        return PVector(xVector, yVector)
+        if distance == 0:
+            distance = 0.01
+            
+        magnitude = 7
+        return PVector(xComponent/distance * magnitude, yComponent / distance * magnitude)
     
     def fire(self, vector):
         
-        
-        mark = 0
-        wait = 1000
-        go = True
-        
-        if(millis() - mark > wait):
-            go = not go
-            mark = millis()
-        
-#        if(go):
-#            sprites.append(Bullet(self.x, self.y, PVector(0, -10), self.team))
-#            SpriteManager.spawn(Bullet(self.x, self.y, vector, self.team))
+        if millis() - self.mark > self.wait:
+             SpriteManager.spawn(Bullet(self.x, self.y, vector, self.team))
+
+             self.mark = millis()
