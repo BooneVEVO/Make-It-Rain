@@ -3,6 +3,7 @@ class ScreenSaverBot:
     xspeed = 8
     diameter = 50
     c = color(0, 255 ,255)
+    weight = 1
     
     def __init__(self, x, y, team):
         self.x = x

@@ -6,7 +6,7 @@ class Bullet(Sprite):
 
     diameter = 10
     c = color(0)
-       
+    weight = 1
     def __init__(self, x, y, vector, team):
         Sprite.__init__(self, x, y, team)
         self.vector = vector   

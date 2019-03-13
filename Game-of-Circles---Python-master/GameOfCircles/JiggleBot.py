@@ -6,6 +6,7 @@ class JiggleBot(Sprite):
     speed = 4
     diameter = 50
     c = color(255,100,255)
+    weight = 1
     
     def move(self):
         self.y += random(-self.speed, self.speed)

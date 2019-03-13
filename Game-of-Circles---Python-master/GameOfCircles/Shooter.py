@@ -8,7 +8,7 @@ class Shooter(Sprite):
     speed = 4
     diameter = 50
     c = color(255, 0 ,255)
-    
+    weight = 1
     mark = 0
     wait = 700
 #    go = False
