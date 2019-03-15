@@ -1,5 +1,6 @@
 from SpriteManager import sprites
 from Bullet import Bullet
+from PeaShooter import PeaShooter
 
 class Player:
     
@@ -11,6 +12,7 @@ class Player:
     speed = 5
     diameter = 50
     c = color(255,0,0)
+#    primaryWeapon = peaShooter
     
     # constructor
     def __init__(self, x, y, team):
@@ -41,7 +43,7 @@ class Player:
         
     def fire(self, vector = None):
         if vector is None:
-            SpriteManager.spawn(Bullet(self.x, self.y, PVector(0, -10), self.team))
+            primaryWeapon = fire
         else:
             SpriteManager.spawn(Bullet(self.x, self.y, vector, self.team))
         

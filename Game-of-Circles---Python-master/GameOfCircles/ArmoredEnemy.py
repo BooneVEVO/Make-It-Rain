@@ -9,7 +9,7 @@ class ArmoredEnemy:
         strokeWeight(self.armor)
         fill(self.c)
         ellipse(self.x, self.y, self.diameter, self.diameter)
-        noStroke()o
+        noStroke()
     def handleCollision(self):
         self.weight -= 1
         if weight < 1:

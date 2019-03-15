@@ -9,6 +9,7 @@ from ScreenSaverBot import ScreenSaverBot
 from Shooter import Shooter
 from ArmoredShooter import ArmoredShooter
 from ArmoredEnemy import ArmoredEnemy
+from PeaShooter import PeaShooter
 
 import SpriteManager
 
@@ -26,7 +27,8 @@ def setup():
     SpriteManager.spawn(Enemy(100, 100, 2))
     SpriteManager.spawn(Enemy(150, 50, 2))
     SpriteManager.spawn(Shooter(150, 50, 2))
-    SpriteManager.spawn(ArmoredEnemy(400, 100))
+    SpriteManager.spawn(ArmoredShooter(100, 200, 2))
+    SpriteManager.spawn(PeaShooter(2))
 
 def draw():
     background(255)    

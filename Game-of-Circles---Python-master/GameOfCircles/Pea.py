@@ -1,11 +1,9 @@
-from Sprite import Sprite
-import SpriteManager
+from Bullet import Bullet
 
-class Bullet(Sprite):
+class Pea(Bullet):
     
-
-    diameter = 10
-    c = color(0)
+    diameter = 20
+    c = color(0, 255, 0)
     weight = 1
     def __init__(self, x, y, vector, team):
         Sprite.__init__(self, x, y, team)
