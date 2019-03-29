@@ -13,7 +13,7 @@ class FlickerBot(Sprite):
     wait = 10
     
     mark2 = 0
-    wait2 = 1000
+    wait2 = 3000
 
     
     def move(self):
@@ -22,9 +22,10 @@ class FlickerBot(Sprite):
             self.speed *= -1
 
         vector = self.aim(SpriteManager.getPlayer())
+        
         self.fire(vector)
-    
-        self.teleport
+        self.teleport()
+        
     def aim(self, target):
         
         distance = dist(target.x, target.y, self.x, self.y)
