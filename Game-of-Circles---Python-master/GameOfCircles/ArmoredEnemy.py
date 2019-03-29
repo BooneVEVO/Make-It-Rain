@@ -10,6 +10,8 @@ class ArmoredEnemy:
         fill(self.c)
         ellipse(self.x, self.y, self.diameter, self.diameter)
         noStroke()
+        constrain(x, 0, 500)
+        constrain(y, 0, 500)
     def handleCollision(self):
         self.weight -= 1
         if weight < 1:

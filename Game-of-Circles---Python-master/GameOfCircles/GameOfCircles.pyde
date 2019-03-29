@@ -10,6 +10,7 @@ from Shooter import Shooter
 from ArmoredShooter import ArmoredShooter
 from ArmoredEnemy import ArmoredEnemy
 from PeaShooter import PeaShooter
+from FlickerBot import FlickerBot
 
 import SpriteManager
 
@@ -23,12 +24,12 @@ def setup():
     player = Player(width/2, height/2, playerTeam)
     
     SpriteManager.setPlayer(player)
-    SpriteManager.spawn(JiggleBot(200, 50, 2))
-    SpriteManager.spawn(Enemy(100, 100, 2))
-    SpriteManager.spawn(Enemy(150, 50, 2))
-    SpriteManager.spawn(Shooter(150, 50, 2))
-    SpriteManager.spawn(ArmoredShooter(100, 200, 2))
-    SpriteManager.spawn(PeaShooter(2))
+#    SpriteManager.spawn(JiggleBot(200, 50, 2))
+#    SpriteManager.spawn(Enemy(100, 100, 2))
+#    SpriteManager.spawn(Enemy(150, 50, 2))
+#    SpriteManager.spawn(Shooter(150, 50, 2))
+    SpriteManager.spawn(FlickerBot(100, 100, 2))
+#    SpriteManager.spawn(PeaShooter(2))
 
 def draw():
     background(255)    
