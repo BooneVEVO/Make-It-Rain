@@ -1,11 +1,11 @@
 from Sprite import Sprite
 import SpriteManager
 
-class Bullet(Sprite):
+class bigBullet(Sprite):
     
 
-    diameter = 10
-    c = color(0)
+    diameter = 50
+    c = color(255, 0, 0)
     weight = 1
     mark = 0
     wait = 10
@@ -17,5 +17,4 @@ class Bullet(Sprite):
     def move(self):
         self.x += self.vector.x
         self.y += self.vector.y
-        
         

@@ -28,7 +28,8 @@ def setup():
 #    SpriteManager.spawn(Enemy(100, 100, 2))
 #    SpriteManager.spawn(Enemy(150, 50, 2))
 #    SpriteManager.spawn(Shooter(150, 50, 2))
-    SpriteManager.spawn(FlickerBot(100, 100, 2))
+    SpriteManager.spawn(FlickerBot(random(1, 500), random(1, 500), 2))
+    SpriteManager.spawn(FlickerBot(random(1, 500), random(1, 500), 2))
 #    SpriteManager.spawn(PeaShooter(2))
 
 def draw():

@@ -9,8 +9,8 @@ class Player:
     right = False
     up = False
     down = False
-    speed = 5
-    diameter = 50
+    speed = 10
+    diameter = 35
     c = color(255,0,0)
 #    primaryWeapon = peaShooter
     
@@ -47,12 +47,24 @@ class Player:
         else:
             SpriteManager.spawn(Bullet(self.x, self.y, vector, self.team))
         
+        
     def handleCollision(self):
         pass
         
     def keyDown(self):
+        
+        charge = 0
+        
         if key == 'f' or key == 'F':
             sprites.append(Bullet(self.x, self.y, PVector(0, -10), self.team))
+            sprites.append(Bullet(self.x + 15, self.y + 5, PVector(0, -10), self.team))
+            sprites.append(Bullet(self.x - 15, self.y + 5, PVector(0, -10), self.team))
+            
+            charge = charge + 1
+        
+        if charge > 10:
+            SpriteManager.spawn(bigBullet(self.x, self.y, vector, self.team))
+            charge = 0
     
         if keyCode == LEFT:
             self.left = True
