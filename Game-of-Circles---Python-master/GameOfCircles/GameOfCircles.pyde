@@ -25,15 +25,15 @@ def setup():
     
     SpriteManager.setPlayer(player)
 #    SpriteManager.spawn(JiggleBot(200, 50, 2))
-#    SpriteManager.spawn(Enemy(100, 100, 2))
-#    SpriteManager.spawn(Enemy(150, 50, 2))
-#    SpriteManager.spawn(Shooter(150, 50, 2))
+    SpriteManager.spawn(Enemy(100, 100, 2))
+    SpriteManager.spawn(Enemy(150, 50, 2))
+    SpriteManager.spawn(Shooter(150, 50, 2))
     SpriteManager.spawn(FlickerBot(random(1, 500), random(1, 500), 2))
     SpriteManager.spawn(FlickerBot(random(1, 500), random(1, 500), 2))
 #    SpriteManager.spawn(PeaShooter(2))
 
 def draw():
-    background(255)    
+    background(random(0, 255), random(0, 255), random(0, 255))    
     SpriteManager.animate()
  
     checkCollisions()

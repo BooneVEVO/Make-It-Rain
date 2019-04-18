@@ -10,7 +10,7 @@ class FlickerBot(Sprite):
     c = color(0, 0 ,255)
     
     mark = 0
-    wait = 500
+    wait = 50
     
     mark2 = 0
     wait2 = 2000
@@ -26,7 +26,7 @@ class FlickerBot(Sprite):
         
         self.fire(vector)
         self.teleport()
-        self.shotgun(0, vector)
+       # self.shotgun(0, vector)
         
     def aim(self, target):
         
