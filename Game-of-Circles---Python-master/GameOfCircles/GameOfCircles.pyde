@@ -33,7 +33,7 @@ def setup():
 #    SpriteManager.spawn(PeaShooter(2))
 
 def draw():
-    background(random(0, 255), random(0, 255), random(0, 255))    
+    background(random(0, 255), random(0, 255), random(0, 255))      #Contributes to game intensity
     SpriteManager.animate()
  
     checkCollisions()
